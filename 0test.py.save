@@ -1,0 +1,9 @@
+from pyspark import SparkContext
+sc = SparkContext.getOrCreate()
+
+mov_rev = sc.parallelize([('Endame', 5), ('Solo', 2), ('The Last Jedi', 4)])
+
+#data_file = sc.textFile('')
+
+mov_rev_coll = sc.parallelize([('Endame', 5), ('Solo', 2), ('The Last Jedi', 4)]).collect
+
